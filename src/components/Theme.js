@@ -10,3 +10,16 @@ export const Theme = {
   bgNavbar: "#313166", // lightest purple of navbar
   btnHover: "#2B5264", // dark blue
 };
+
+export const FontSizes = {
+  body: "16px",
+  title: "19px",
+
+  // Big devices (desktop)
+  headerBig: "30px",
+  subheaderBig: "25px",
+
+  // Small devices (mobiles)
+  headerSml: "21px",
+  subheaderSml: "18px",
+};

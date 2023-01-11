@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontSizes } from "../Theme";
 
 export const Nav = styled.nav`
   display: flex;
@@ -26,7 +27,7 @@ export const NavExtended = styled.nav`
   right: 0;
   top: 0;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -52,7 +53,7 @@ export const NavbarExtendedButton = styled.div`
     color: ${({ theme }) => theme.txtMain};
     background: none;
     border: none;
-    font-size: xx-large;
+    font-size: ${FontSizes.headerBig};
   }
 
   @media screen and (min-width: 900px) {
@@ -64,7 +65,7 @@ export const NavLinksContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-left: 30px;
+  padding-left: 35px;
 `;
 
 export const NavLinksExtendedContainer = styled.div`
@@ -75,11 +76,12 @@ export const NavLinksExtendedContainer = styled.div`
 `;
 
 export const NavLink = styled.p`
-  margin: 8px 0 0 0;
+  margin: 5px 0;
   direction: rtl;
   text-align: left;
   color: ${({ theme }) => theme.txtMain};
   text-decoration: none;
+  font-size: ${FontSizes.body};
   .indicator {
     display: none;
   }
@@ -98,5 +100,15 @@ export const NavLink = styled.p`
     .indicator {
       display: inline-block;
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    margin: 15px 0;
+    font-size: ${FontSizes.title};
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 25px 0;
+    font-size: ${FontSizes.headerSml};
   }
 `;
