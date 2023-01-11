@@ -1,11 +1,16 @@
 import React from "react";
+import { useNav } from "../../hooks/useNav";
 import {} from "./AboutMe.style";
 
 const AboutMe = () => {
+  const aboutMeRef = useNav("aboutme");
+
   return (
-    <>
-      <h1>About Me</h1>
-    </>
+    <section id="aboutme" ref={aboutMeRef}>
+      <header>
+        <h1>About Me</h1>
+      </header>
+    </section>
   );
 };
 

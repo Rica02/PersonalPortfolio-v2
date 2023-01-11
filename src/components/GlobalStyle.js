@@ -9,10 +9,23 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Roboto, "Open Sans", sans-serif;
   }
 
-  /* .section {
+  section {
     color: ${({ theme }) => theme.txtMain};
     background-color: ${({ theme }) => theme.bgBase};
-  } */
+    min-height: 100vh;
+
+    h1 {
+      margin: 0
+    }
+  }
+
+  header {
+    background-color: ${({ theme }) => theme.bgLighter};
+    display: flex;
+    align-items: center;
+    height: 120px;
+    padding: 60px;
+  }
 
   // Text highlights
   .txtHighlightMain {

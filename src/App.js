@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Theme } from "./components/Theme";
 import { GlobalStyles } from "./components/GlobalStyle";
+import NavProvider from "./context/NavContext";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
@@ -11,17 +11,21 @@ import ContactMe from "./pages/ContactMe";
 
 function App() {
   return (
+    // Provides theme colours
     <ThemeProvider theme={Theme}>
-      <Router>
+      {/* Checks which section is currently in view */}
+      <NavProvider>
+        {/* Styles used throughout the website */}
+        <GlobalStyles />
+        {/* Navigation bar */}
         <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contactme" element={<ContactMe />} />
-        </Routes>
-      </Router>
+        {/* All screens */}
+        <Home />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <ContactMe />
+      </NavProvider>
     </ThemeProvider>
   );
 }

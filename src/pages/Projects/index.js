@@ -1,10 +1,15 @@
 import React from "react";
+import { useNav } from "../../hooks/useNav";
 
 const Projects = () => {
+  const projectsRef = useNav("projects");
+
   return (
-    <>
-      <h1>Projects</h1>
-    </>
+    <section id="projects" ref={projectsRef}>
+      <header>
+        <h1>Projects</h1>
+      </header>
+    </section>
   );
 };
 

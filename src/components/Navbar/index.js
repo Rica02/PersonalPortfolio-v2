@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
+import { NavContext } from "../../context/NavContext";
 import {
   Nav,
   NavExtended,
@@ -7,36 +9,32 @@ import {
   NavLinksExtendedContainer,
   NavLink,
 } from "./Navbar.style";
-import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 
 export default function Navbar() {
+  const { activeLinkId } = useContext(NavContext); // Current section ID in view
   const [extendNavbar, setExtendNavbar] = useState(false); // Opens extended menu when screen is small
-  const [linkSelected, setLinkSelected] = useState(false); // Called whenever a link is selected
 
-  useEffect(() => {
-    // Close extended menu after link selection
+  const navLinks = ["home", "about me", "skills", "projects", "contact me"];
+
+  const handleClickNav = (target) => {
+    // Scroll to selection and close menu (if using extended menu)
+    document.getElementById(target).scrollIntoView({ behavior: "smooth" });
     setExtendNavbar(false);
-  }, [linkSelected]);
+  };
 
   // Navbar links
   function Links() {
+    // Note: section ID is the same as navLink name but without space
     return (
       <>
-        <NavLink to="/" onClick={() => setLinkSelected(!linkSelected)}>
-          home <span className="indicator">&lt;</span>
-        </NavLink>
-        <NavLink to="/aboutme" onClick={() => setLinkSelected(!linkSelected)}>
-          about me <span className="indicator">&lt;</span>
-        </NavLink>
-        <NavLink to="/skills" onClick={() => setLinkSelected(!linkSelected)}>
-          skills <span className="indicator">&lt;</span>
-        </NavLink>
-        <NavLink to="/projects" onClick={() => setLinkSelected(!linkSelected)}>
-          projects <span className="indicator">&lt;</span>
-        </NavLink>
-        <NavLink to="/contactme" onClick={() => setLinkSelected(!linkSelected)}>
-          contact me <span className="indicator">&lt;</span>
-        </NavLink>
+        {navLinks.map((link) => (
+          <NavLink
+            className={activeLinkId === link.replace(/\s/g, "") ? "active" : ""}
+            onClick={() => handleClickNav(link.replace(/\s/g, ""))}
+          >
+            {link} <span className="indicator">&lt;</span>{" "}
+          </NavLink>
+        ))}
       </>
     );
   }

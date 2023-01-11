@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink as Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   display: flex;
@@ -75,7 +74,7 @@ export const NavLinksExtendedContainer = styled.div`
   flex-direction: column;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.p`
   margin: 8px 0 0 0;
   direction: rtl;
   text-align: left;
@@ -96,8 +95,6 @@ export const NavLink = styled(Link)`
 
   &.active {
     color: ${({ theme }) => theme.highlightMain};
-    font-weight: bold;
-    transform: translateX(5px);
     .indicator {
       display: inline-block;
     }
