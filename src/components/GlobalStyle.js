@@ -23,8 +23,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.bgLighter};
     display: flex;
     align-items: center;
-    height: 120px;
-    padding: 60px;
+    height: 90px;
+    padding-left: 120px;
   }
 
   // Text highlights
