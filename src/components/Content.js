@@ -47,7 +47,7 @@ import bookwormThumb from "../assets/projects/bookwormden-thumb.png";
 export const AboutMeContent = {
   Name: "My name is Rica Mae Averion, call me Rica! It's nice to meet you.",
   Intro:
-    "I’m a junior web & mobile app software developer, specialising in front-end design and development.\nI have worked with a variety of tools and languages in a number of projects, particularly working with HTML, CSS, JavaScript/TypeScript in React and React Native frameworks. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.\n\nI'm currently open for work and available to work on a full-time or part-time capacity.",
+    "I’m a Junior Web and Mobile App Developer, specialising in front-end design and development.\nI have worked with a variety of tools and languages in a number of projects, particularly working with HTML, CSS, JavaScript/TypeScript in React and React Native frameworks. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.\n\nI'm currently open to work and available on a full-time capacity.",
 
   CardContent: [
     {
@@ -70,7 +70,7 @@ export const AboutMeContent = {
 
 export const SkillsContent = {
   SkillDesc:
-    "As a junior web and mobile app developer, I have worked with both back-end and front-end, with a preference to front-end design and development. I'm familiar with various frameworks and libraries, recently working mostly with React and Node.js with JavaScript.\n\n I am open for work and internship opportunities.",
+    "I've worked on various web and mobile app projects both on the front-end and back-end sides. My strength is in front-end design and development. Main tools I've worked with include JavaScript/TypeScript, Java, Objective C, React, React Native, Node.js, Firebase and MySQL.",
   Section: [
     {
       header: "LANGUAGES",

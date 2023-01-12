@@ -26,10 +26,17 @@ export const GlobalStyles = createGlobalStyle`
     h1 {
       margin: 0;
       font-size: ${FontSizes.headerBig};
+    }
 
-      @media screen and (max-width: 576px) {
+    @media screen and (max-width: 768px) {
+      height: 60px;
+      justify-content: center;
+      padding: 0;
+
+      h1 {
         font-size: ${FontSizes.headerSml};
       }
+
     }
   }
 

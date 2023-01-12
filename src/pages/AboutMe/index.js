@@ -6,9 +6,9 @@ import {
   Card,
   CardDescription,
   CardTitle,
-  LowerContainer,
   BgTextContainer,
   CardsContainer,
+  UpperContainer,
 } from "./AboutMe.style";
 import { AboutMeContent } from "../../components/Content";
 
@@ -16,7 +16,7 @@ const AboutMe = () => {
   const aboutMeRef = useNav("aboutme");
 
   // Returns the 3 cards in About Me page
-  function HobbyCards() {
+  function Cards() {
     return (
       <>
         {AboutMeContent.CardContent.map((card, index) => (
@@ -41,22 +41,22 @@ const AboutMe = () => {
           <h1>About me</h1>
         </header>
         <MainBodyContainer>
-          <IntroContainer>
-            <p className="aboutMeName">{AboutMeContent.Name}</p>
-            <p>{AboutMeContent.Intro}</p>
-          </IntroContainer>
-          <LowerContainer>
+          <UpperContainer>
+            <IntroContainer>
+              <p className="aboutMeName">{AboutMeContent.Name}</p>
+              <p>{AboutMeContent.Intro}</p>
+            </IntroContainer>
             <CardsContainer>
-              <HobbyCards />
+              <Cards />
             </CardsContainer>
-            <BgTextContainer>
-              <p className="txtFaded">
-                <span className="txtHighlightSecondary">&gt;</span> continue (
-                <span className="txtHighlightSecondary">Y</span>/
-                <span className="txtHighlightSecondary">N</span>)?
-              </p>
-            </BgTextContainer>
-          </LowerContainer>
+          </UpperContainer>
+          <BgTextContainer>
+            <p className="txtFaded">
+              <span className="txtHighlightSecondary">&gt;</span> continue (
+              <span className="txtHighlightSecondary">Y</span>/
+              <span className="txtHighlightSecondary">N</span>)?
+            </p>
+          </BgTextContainer>
         </MainBodyContainer>
       </div>
     </section>

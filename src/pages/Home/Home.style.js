@@ -1,15 +1,13 @@
 import styled from "styled-components";
+import { FontSizes } from "../../components/Theme";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-right: 160px;
   height: 100vh;
   margin-bottom: 20px;
 
   @media screen and (max-width: 900px) {
-    margin: 0;
-    margin-bottom: 10px;
+    margin: 0 0 20px 0;
   }
 `;
 
@@ -17,8 +15,6 @@ export const MainBodyContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 65% 35%;
-  justify-content: stretch;
-  height: 100%;
   width: 100%;
 
   @media screen and (max-width: 900px) {
@@ -39,7 +35,7 @@ export const IntroContainer = styled.div`
   h1 {
     text-align: center;
     font-weight: normal;
-    margin: 0 0 20px 0;
+    margin: 10px 0 25px 0;
   }
 
   p {
@@ -48,11 +44,28 @@ export const IntroContainer = styled.div`
     margin: 0;
   }
 
-  @media screen and (max-width: 900px) {
-    margin: 0;
+  .helloWorldSml {
+    display: none;
   }
+
   @media screen and (max-width: 768px) {
     grid-area: 1 / 1 / 1 / 2;
+    display: flex;
+    position: relative;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: ${FontSizes.subheaderBig};
+    }
+
+    .helloWorldSml {
+      display: flex;
+      position: absolute;
+      bottom: 15px;
+    }
   }
 `;
 
@@ -61,10 +74,15 @@ export const BackgroundContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-right: 160px;
 
   p {
-    font-size: 4vw;
+    font-size: 3.5vw;
     margin: 30px;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0;
   }
 
   @media screen and (max-width: 768px) {
@@ -80,9 +98,11 @@ export const BottomContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   min-height: 200px;
+  padding-right: 160px;
 
   @media screen and (max-width: 900px) {
     align-items: center;
+    padding: 0;
   }
 `;
 

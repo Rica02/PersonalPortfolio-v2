@@ -18,6 +18,17 @@ import resumeFile from "../../assets/resume.pdf";
 const Home = () => {
   const homeRef = useNav("home");
 
+  const HelloWorld = () => {
+    return (
+      <p className="txtFaded">
+        <span className="txtHighlightSecondary">&gt;</span> hello world
+        <span id="cursor" className="txtHighlightSecondary">
+          |
+        </span>
+      </p>
+    );
+  };
+
   return (
     <section id="home" ref={homeRef}>
       <Container>
@@ -28,14 +39,12 @@ const Home = () => {
               I'm <span className="txtHighlightMain">Rica</span>.
             </h1>
             <p>WEB & MOBILE APP DEVELOPER</p>
+            <div className="helloWorldSml">
+              <HelloWorld />
+            </div>
           </IntroContainer>
           <BackgroundContainer>
-            <p className="txtFaded">
-              <span className="txtHighlightSecondary">&gt;</span> hello world
-              <span id="cursor" className="txtHighlightSecondary">
-                |
-              </span>
-            </p>
+            <HelloWorld />
           </BackgroundContainer>
           <BottomContainer>
             <ButtonsContainer>

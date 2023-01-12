@@ -6,12 +6,20 @@ export const MainBodyContainer = styled.div`
   flex-direction: column;
   flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px 40px;
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     padding: 20px;
   }
+`;
+
+export const UpperContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const IntroContainer = styled.div`
@@ -28,19 +36,16 @@ export const IntroContainer = styled.div`
   }
 `;
 
-export const LowerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-`;
-
 export const CardsContainer = styled.div`
   display: flex;
+  margin-top: 20px;
   gap: 20px;
   max-width: 1200px;
+  margin-bottom: 50px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin: 20px 20px;
   }
 `;
 
@@ -89,17 +94,22 @@ export const CardDescription = styled.div`
 `;
 
 export const BgTextContainer = styled.div`
-  margin: 20px 0 40px 0;
+  display: flex;
+  justify-self: flex-end;
+  width: 100%;
+  max-width: 1200px;
 
   p {
-    font-size: ${FontSizes.headerBig};
+    font-size: 2.5vw;
     margin: 0;
   }
 
   @media screen and (max-width: 768px) {
+    justify-content: center;
+
     p {
       font-size: ${FontSizes.headerSml};
-      text-align: center;
+      margin: 10px 0;
     }
   }
 `;

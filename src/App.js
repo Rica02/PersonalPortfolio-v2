@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { Theme } from "./components/Theme";
 import { GlobalStyles } from "./components/GlobalStyle";
@@ -10,6 +11,21 @@ import Projects from "./pages/Projects";
 import ContactMe from "./pages/ContactMe";
 
 function App() {
+  // Blinking cursor effect
+  useEffect(() => {
+    var cursor = true;
+    var speed = 1000;
+    setInterval(() => {
+      if (cursor) {
+        document.getElementById("cursor").style.opacity = 0;
+        cursor = false;
+      } else {
+        document.getElementById("cursor").style.opacity = 1;
+        cursor = true;
+      }
+    }, speed);
+  });
+
   return (
     // Provides theme colours
     <ThemeProvider theme={Theme}>
