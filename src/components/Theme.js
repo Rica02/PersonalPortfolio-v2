@@ -12,14 +12,13 @@ export const Theme = {
 };
 
 export const FontSizes = {
+  bodySml: "14px",
   body: "16px",
   title: "19px",
 
-  // Big devices (desktop)
   headerBig: "30px",
   subheaderBig: "25px",
 
-  // Small devices (mobiles)
   headerSml: "21px",
   subheaderSml: "18px",
 };

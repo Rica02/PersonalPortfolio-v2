@@ -1,162 +1,163 @@
 import styled from "styled-components";
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
+import { FontSizes } from "../../components/Theme";
 
 export const MainBodyContainer = styled.div`
-  display: grid;
-  grid-template-columns: 35% auto;
-  grid-template-rows: auto 30%;
-  height: 100%;
-  margin-right: 160px;
-
-  @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    margin: 0;
-  }
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 `;
 
-export const UpperLeft = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
-  background-color: ${({ theme }) => theme.bgDarker};
+export const DescriptionContainer = styled.div`
   display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.bgDarker};
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   white-space: pre-wrap;
-  overflow: hidden;
+  max-height: 250px;
+  padding: 20px 40px 10px 40px;
 
-  p {
-    font-size: large;
-    max-width: 450px;
+  .skillDesc {
+    font-size: ${FontSizes.body};
+    max-width: 900px;
+    line-height: 150%;
   }
 
-  @media screen and (max-width: 900px) {
-    grid-area: 1 / 1 / 2 / 2;
-    padding: 10px 30px;
-    height: auto;
+  .bgText {
+    font-size: 2vw;
+    margin: 0;
+    text-align: right;
+    width: 100%;
   }
+
   @media screen and (max-width: 768px) {
-    grid-area: 1 / 1 / 2 / 2;
+    max-height: fit-content;
+    padding: 20px 20px 10px 20px;
 
-    p {
-      font-size: small;
+    .bgText {
+      font-size: ${FontSizes.headerSml};
     }
   }
 `;
 
-export const LowerLeft = styled.div`
-  grid-area: 2 / 1 / 3 / 2;
+export const SkillsContainer = styled.div`
+  background-color: ${({ theme }) => theme.bgBase};
   display: flex;
-  background-color: ${({ theme }) => theme.bgDarker};
+  flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px 40px 20px 40px;
 
-  p {
-    font-size: 4vw;
+  > p {
+    font-size: ${FontSizes.body};
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px 20px 20px;
+  }
+`;
+
+export const SkillListContainer = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 1200px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+export const SkillRow = styled.div`
+  display: flex;
+  padding: 5px 10px;
+
+  :last-child {
+    .lineSeparatorLrg {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const RowTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+
+  p {
+    font-size: ${FontSizes.body};
+    text-align: center;
+    margin: 0;
+  }
+
+  .lineSeparatorSml {
     display: none;
   }
-`;
 
-export const RightContainer = styled.div`
-  background-color: ${({ theme }) => theme.bgBase};
-  grid-area: 1 / 2 / 3 / 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 10px 40px;
-  overflow: hidden;
-
-  p {
-    font-size: larger;
-    margin-bottom: 40px;
-  }
-
-  @media screen and (max-width: 900px) {
-    grid-area: 2 / 1 / 3 / 2;
-    height: 100%;
-
-    p {
-      font-size: medium;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-  }
   @media screen and (max-width: 768px) {
-    grid-area: 2 / 1 / 3 / 2;
+    width: 100%;
 
-    p {
-      font-size: small;
+    .lineSeparatorSml {
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid ${({ theme }) => theme.highlightSecondary};
+      margin: 10px 0;
     }
   }
 `;
 
-export const TableContainer = styled.div`
-  justify-content: center;
-  overflow: auto;
+export const RowList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 
-  ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
+  .lineSeparatorLrg {
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid ${({ theme }) => theme.highlightSecondary};
   }
 
-  ::-webkit-scrollbar-corner {
-    background: rgba(0, 0, 0, 0);
-  }
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    margin: 5px 0 20px 0;
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-`;
-
-export const TableHeader = styled.th`
-  width: 20%;
-  font-size: large;
-  font-weight: 400;
-
-  @media screen and (max-width: 900px) {
-    font-size: small;
+    .lineSeparatorLrg {
+      display: none;
+    }
   }
 `;
 
-export const ToolCell = styled.td`
+export const SkillList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Skill = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 80px;
+  width: 100px;
+  padding: 5px;
 
   img {
     height: 50px;
     object-fit: contain;
   }
-  p {
-    font-size: small;
-    text-align: center;
-    margin: 5px 0;
-    color: ${({ theme }) => theme.txtSecondary};
-  }
-  .system {
-    font-size: large;
-    color: ${({ theme }) => theme.highlightSecondary};
-  }
 
-  @media screen and (max-width: 900px) {
-    img {
-      height: 40px;
-      object-fit: contain;
-    }
-    p {
-      font-size: x-small;
-    }
+  p {
+    font-size: ${FontSizes.bodySml};
+    text-align: center;
+    margin: 10px 0 0 0;
+    color: ${({ theme }) => theme.txtSecondary};
   }
 `;

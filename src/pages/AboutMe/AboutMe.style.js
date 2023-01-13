@@ -30,6 +30,7 @@ export const IntroContainer = styled.div`
   font-size: ${FontSizes.body};
   text-align: center;
   white-space: pre-wrap;
+  line-height: 150%;
 
   .aboutMeName {
     font-size: ${FontSizes.title};
@@ -57,6 +58,7 @@ export const Card = styled.div`
   border-radius: 10px;
   text-align: center;
   padding: 0px 20px 20px 20px;
+  line-height: 150%;
 
   &:hover {
     background-color: ${({ theme }) => theme.btnHover};
@@ -79,6 +81,12 @@ export const CardTitle = styled.div`
     margin-right: 10px;
     color: ${({ theme }) => theme.highlightMain};
   }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: ${FontSizes.body};
+    }
+  }
 `;
 
 export const CardDescription = styled.div`
@@ -90,6 +98,12 @@ export const CardDescription = styled.div`
     font-size: ${FontSizes.body};
     margin: 0;
     white-space: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: ${FontSizes.bodySml};
+    }
   }
 `;
 

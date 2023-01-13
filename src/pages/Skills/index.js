@@ -2,38 +2,43 @@ import React from "react";
 import { useNav } from "../../hooks/useNav";
 import {
   MainBodyContainer,
-  LowerLeft,
-  RightContainer,
-  UpperLeft,
-  Container,
-  TableContainer,
-  ToolCell,
-  TableHeader,
+  DescriptionContainer,
+  SkillsContainer,
+  SkillListContainer,
+  SkillRow,
+  RowTitle,
+  RowList,
+  Skill,
+  SkillList,
 } from "./Skills.style";
 import { SkillsContent } from "../../components/Content";
 
 const Skills = () => {
   const skillsRef = useNav("skills");
 
-  function Row() {
+  function Skills() {
     return (
-      <>
-        <table>
-          {SkillsContent.Section.map((section, index) => (
-            <tr key={index}>
-              <TableHeader>{section.header}</TableHeader>
+      <SkillListContainer>
+        {SkillsContent.Section.map((section, index) => (
+          <SkillRow key={index}>
+            <RowTitle>
+              <p>{section.header}</p>
+              <div className="lineSeparatorSml txtFaded" />
+            </RowTitle>
+            <RowList>
               {section.tools.map((tool, index) => (
-                <td key={index}>
-                  <ToolCell>
-                    <img src={tool.img} />
+                <SkillList key={index}>
+                  <Skill>
+                    <img src={tool.img} alt="tool logo" />
                     <p>{tool.desc}</p>
-                  </ToolCell>
-                </td>
+                  </Skill>
+                </SkillList>
               ))}
-            </tr>
-          ))}
-        </table>
-      </>
+              <div className="lineSeparatorLrg txtFaded" />
+            </RowList>
+          </SkillRow>
+        ))}
+      </SkillListContainer>
     );
   }
 
@@ -44,20 +49,14 @@ const Skills = () => {
           <h1>Skills</h1>
         </header>
         <MainBodyContainer>
-          <UpperLeft>
-            <p>{SkillsContent.SkillDesc}</p>
-          </UpperLeft>
-          <LowerLeft>
-            <p className="txtFaded">loading...</p>
-          </LowerLeft>
-          <RightContainer>
-            <div>
-              <p>I have worked with the following tools:</p>
-              <TableContainer>
-                <Row />
-              </TableContainer>
-            </div>
-          </RightContainer>
+          <DescriptionContainer>
+            <p className="skillDesc">{SkillsContent.SkillDesc}</p>
+            <p className="txtFaded bgText">loading...</p>
+          </DescriptionContainer>
+          <SkillsContainer>
+            <p>I have worked with the following tools:</p>
+            <Skills />
+          </SkillsContainer>
         </MainBodyContainer>
       </div>
     </section>
