@@ -1,12 +1,13 @@
 import React from "react";
 import { useNav } from "../../hooks/useNav";
 import {
-  ImgContainer,
+  ImgsWrapper,
   MainBodyContainer,
-  MyProjectsContainer,
-  OtherProjectsContainer,
-  ProjectsContainer,
+  Projects,
+  ProjectsWrapper,
   TitleContainer,
+  ProjectList,
+  ImgContainer,
 } from "./Work.style";
 import imgMockups from "../../assets/images/mockups.png";
 import imgWireframes from "../../assets/images/wireframes.png";
@@ -21,8 +22,8 @@ const Work = () => {
           <h1>Work</h1>
         </header>
         <MainBodyContainer>
-          <ProjectsContainer>
-            <MyProjectsContainer>
+          <ProjectsWrapper>
+            <Projects>
               <TitleContainer>
                 <h2>My Projects</h2>
                 <p>
@@ -30,29 +31,38 @@ const Work = () => {
                   were created from scratch, from design to development.
                 </p>
               </TitleContainer>
-            </MyProjectsContainer>
-            <OtherProjectsContainer>
+              <ProjectList>
+                <div className="test" />
+                <div className="test" />
+                <div className="test" />
+                <div className="test" />
+                <div className="test" />
+                <div className="test" />
+              </ProjectList>
+            </Projects>
+            <Projects>
               <TitleContainer>
-                <h2>Projects I've worked on</h2>
+                <h2>Other Projects</h2>
                 <p>
-                  Projects I've contributed to working with a bigger team in a
-                  company.
+                  Bigger projects I've contributed to working with a team in a
+                  company for a client.
                 </p>
               </TitleContainer>
-            </OtherProjectsContainer>
-          </ProjectsContainer>
-          <ImgContainer>
-            <div>
-              <img
-                id="wireframeImg"
-                src={imgWireframes}
-                alt="wireframes example"
-              />
-            </div>
-            <div>
-              <img id="mockupImg" src={imgMockups} alt="mockups example" />
-            </div>
-          </ImgContainer>
+              <ProjectList>
+                <div className="test" />
+                <div className="test" />
+                <div className="test" />
+              </ProjectList>
+            </Projects>
+          </ProjectsWrapper>
+          <ImgsWrapper>
+            <ImgContainer>
+              <img src={imgWireframes} alt="wireframes example" />
+            </ImgContainer>
+            <ImgContainer>
+              <img src={imgMockups} alt="mockups example" />
+            </ImgContainer>
+          </ImgsWrapper>
         </MainBodyContainer>
       </div>
     </section>
