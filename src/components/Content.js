@@ -28,6 +28,7 @@ import logoXcode from "../assets/logos/logo-xcode.png";
 import logoPS from "../assets/logos/logo-photoshop.png";
 import logoAI from "../assets/logos/logo-illustrator.png";
 import logoXD from "../assets/logos/logo-xd.png";
+import logoFigma from "../assets/logos/logo-figma.png";
 import logoInkscape from "../assets/logos/logo-inkscape.png";
 import logoProcreate from "../assets/logos/logo-procreate.png";
 
@@ -159,6 +160,10 @@ export const SkillsContent = {
     {
       header: "DESIGN",
       tools: [
+        {
+          img: logoFigma,
+          desc: "Figma",
+        },
         {
           img: logoXD,
           desc: "Adobe XD",

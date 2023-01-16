@@ -59,11 +59,11 @@ export const Card = styled.div`
   text-align: center;
   padding: 0px 20px 20px 20px;
   line-height: 150%;
+  transition: all 0.3s;
 
   &:hover {
     background-color: ${({ theme }) => theme.btnHover};
-    transform: translateY(-7px);
-    transition: transform 0.5s;
+    transform: translateY(-10px);
   }
 `;
 

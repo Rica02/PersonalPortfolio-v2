@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
+import Work from "./pages/Work";
 import ContactMe from "./pages/ContactMe";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
         <Home />
         <AboutMe />
         <Skills />
-        <Projects />
+        <Work />
         <ContactMe />
       </NavProvider>
     </ThemeProvider>

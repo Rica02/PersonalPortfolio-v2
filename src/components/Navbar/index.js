@@ -14,7 +14,7 @@ export default function Navbar() {
   const { activeLinkId } = useContext(NavContext); // Current section ID in view
   const [extendNavbar, setExtendNavbar] = useState(false); // Opens extended menu when screen is small
 
-  const navLinks = ["home", "about me", "skills", "projects", "contact me"];
+  const navLinks = ["home", "about me", "skills", "work", "contact me"];
 
   const handleClickNav = (target) => {
     // Scroll to selection and close menu (if using extended menu)
