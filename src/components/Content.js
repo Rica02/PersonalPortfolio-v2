@@ -190,7 +190,7 @@ export const SkillsContent = {
 };
 
 export const ProjectContent = {
-  ProjectList: [
+  MyProjectList: [
     {
       title: "Scusa Mi! App",
       // Max ~50 words
@@ -264,6 +264,16 @@ export const ProjectContent = {
       videoUrl: bookwormVideo,
       sourceUrl: "https://github.com/Rica02/BookwormDen",
       imgThumb: bookwormThumb,
+    },
+  ],
+  OtherProjectList: [
+    {
+      title: "Play Today.",
+      desc: "Mobile application prototype for a local popular Italian restaurant. Designed and developed by me from scratch with React Native (Expo) using TypeScript.",
+      tools: [logoVscode, logoTS, logoReactNat],
+      videoUrl: scusamiVideo,
+      sourceUrl: "https://github.com/Rica02/ScusaMi-App",
+      imgThumb: scusamiThumb,
     },
   ],
 };

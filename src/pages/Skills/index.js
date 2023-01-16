@@ -16,7 +16,7 @@ import { SkillsContent } from "../../components/Content";
 const Skills = () => {
   const skillsRef = useNav("skills");
 
-  function Skills() {
+  const Skills = () => {
     return (
       <SkillListContainer>
         {SkillsContent.Section.map((section, index) => (
@@ -40,7 +40,7 @@ const Skills = () => {
         ))}
       </SkillListContainer>
     );
-  }
+  };
 
   return (
     <section id="skills" ref={skillsRef}>

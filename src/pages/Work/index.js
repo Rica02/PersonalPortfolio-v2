@@ -11,6 +11,8 @@ import {
 } from "./Work.style";
 import imgMockups from "../../assets/images/mockups.png";
 import imgWireframes from "../../assets/images/wireframes.png";
+import ProjectThumbnail from "../../components/ProjectThumbnail";
+import { ProjectContent } from "../../components/Content";
 
 const Work = () => {
   const workRef = useNav("work");
@@ -32,12 +34,9 @@ const Work = () => {
                 </p>
               </TitleContainer>
               <ProjectList>
-                <div className="test" />
-                <div className="test" />
-                <div className="test" />
-                <div className="test" />
-                <div className="test" />
-                <div className="test" />
+                {ProjectContent.MyProjectList.map((project, index) => (
+                  <ProjectThumbnail key={index} {...project} />
+                ))}
               </ProjectList>
             </Projects>
             <Projects>
@@ -49,9 +48,9 @@ const Work = () => {
                 </p>
               </TitleContainer>
               <ProjectList>
-                <div className="test" />
-                <div className="test" />
-                <div className="test" />
+                {ProjectContent.OtherProjectList.map((project, index) => (
+                  <ProjectThumbnail key={index} {...project} />
+                ))}
               </ProjectList>
             </Projects>
           </ProjectsWrapper>
