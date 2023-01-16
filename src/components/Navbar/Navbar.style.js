@@ -82,6 +82,9 @@ export const NavLink = styled.p`
   color: ${({ theme }) => theme.txtMain};
   text-decoration: none;
   font-size: ${FontSizes.body};
+  cursor: pointer;
+  transition: all 0.2s linear;
+
   .indicator {
     display: none;
   }
@@ -89,7 +92,6 @@ export const NavLink = styled.p`
   &:hover {
     color: ${({ theme }) => theme.highlightMain};
     transform: translateX(3px);
-    transition: all 0.2s linear;
     .indicator {
       display: inline-block;
     }

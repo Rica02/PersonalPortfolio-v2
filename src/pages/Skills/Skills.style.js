@@ -152,6 +152,11 @@ export const Skill = styled.div`
   img {
     height: 50px;
     object-fit: contain;
+    transition: all 0.25s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   p {
