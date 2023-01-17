@@ -63,5 +63,6 @@ export const GlobalStyles = createGlobalStyle`
   .txtFaded {
     font-family: monospace;
     opacity: 0.2;
+    cursor: default;
   }
 `;

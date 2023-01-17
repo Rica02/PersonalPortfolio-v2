@@ -118,7 +118,7 @@ export const ActionButton = styled.button`
   align-items: center;
   justify-content: center;
   width: 160px;
-  font-size: 16px;
+  font-size: ${FontSizes.body};
   font-weight: bold;
   background: none;
   border: none;
@@ -127,6 +127,7 @@ export const ActionButton = styled.button`
   background-color: ${({ theme }) => theme.highlightSecondary};
   padding: 8px 5px;
   margin-bottom: 15px;
+  transition: all 0.25s linear;
 
   &:hover {
     cursor: pointer;
@@ -140,10 +141,14 @@ export const SocialContainer = styled.div`
   color: ${({ theme }) => theme.highlightSecondary};
   font-size: 40px;
 
-  .icon:hover {
-    cursor: pointer;
-    background-color: ${({ theme }) => theme.highlightMain};
-    border: ${({ theme }) => theme.highlightSecondary} solid 1px;
-    border-radius: 5px;
+  .icon {
+    transition: all 0.25s linear;
+
+    &:hover {
+      cursor: pointer;
+      background-color: ${({ theme }) => theme.highlightMain};
+      border: ${({ theme }) => theme.highlightSecondary} solid 1px;
+      border-radius: 5px;
+    }
   }
 `;

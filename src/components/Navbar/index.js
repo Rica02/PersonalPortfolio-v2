@@ -8,6 +8,7 @@ import {
   NavLinksContainer,
   NavLinksExtendedContainer,
   NavLink,
+  ButtonsContainer,
 } from "./Navbar.style";
 
 export default function Navbar() {
@@ -23,12 +24,13 @@ export default function Navbar() {
   };
 
   // Navbar links
-  function Links() {
+  const Links = () => {
     // Note: section ID is the same as navLink name but without space
     return (
       <>
-        {navLinks.map((link) => (
+        {navLinks.map((link, key) => (
           <NavLink
+            key={key}
             className={activeLinkId === link.replace(/\s/g, "") ? "active" : ""}
             onClick={() => handleClickNav(link.replace(/\s/g, ""))}
           >
@@ -37,12 +39,13 @@ export default function Navbar() {
         ))}
       </>
     );
-  }
+  };
 
   return (
     <>
       {/* Side bar (wide screens)*/}
       <Nav>
+        <ButtonsContainer>test</ButtonsContainer>
         <NavLinksContainer>
           <Links />
         </NavLinksContainer>

@@ -8,7 +8,6 @@ export const MainBodyContainer = styled.div`
   padding: 20px;
   gap: 20px;
   max-width: 1200px;
-  //border: 1px solid red;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -78,7 +77,6 @@ export const ImgsWrapper = styled.div`
   max-width: 500px;
   gap: 10px;
   flex-direction: column;
-  //border: red 1px solid;
 
   @media screen and (max-width: 768px) {
     flex-direction: row;

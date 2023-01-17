@@ -3,15 +3,16 @@ import { FontSizes } from "../Theme";
 
 export const Nav = styled.nav`
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
   width: 160px;
   position: fixed;
   z-index: 1;
   bottom: 0;
   right: 0;
-  padding-bottom: 80px;
+  padding: 10px 0 80px 0;
   overflow-x: hidden;
   background-color: ${({ theme }) => theme.bgNavbar};
 
@@ -59,6 +60,10 @@ export const NavbarExtendedButton = styled.div`
   @media screen and (min-width: 900px) {
     display: none;
   }
+`;
+
+export const ButtonsContainer = styled.div`
+  //border: red solid 1px;
 `;
 
 export const NavLinksContainer = styled.div`

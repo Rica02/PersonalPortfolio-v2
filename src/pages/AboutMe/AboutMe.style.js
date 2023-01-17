@@ -54,7 +54,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  border: ${({ theme }) => theme.highlightSecondary} solid 1px;
+  border: ${({ theme }) => theme.btnHover} solid 1px;
   border-radius: 10px;
   text-align: center;
   padding: 0px 20px 20px 20px;

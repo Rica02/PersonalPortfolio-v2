@@ -94,6 +94,7 @@ export const SendButton = styled.input`
   padding: 10px 30px;
   font-size: ${FontSizes.body};
   margin-bottom: 15px;
+  transition: all 0.25s linear;
 
   &:hover {
     background-color: ${({ theme }) => theme.btnHover};

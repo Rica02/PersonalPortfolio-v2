@@ -16,7 +16,7 @@ const AboutMe = () => {
   const aboutMeRef = useNav("aboutme");
 
   // Returns the 3 cards in About Me page
-  function Cards() {
+  const Cards = () => {
     return (
       <>
         {AboutMeContent.CardContent.map((card, index) => (
@@ -32,7 +32,7 @@ const AboutMe = () => {
         ))}
       </>
     );
-  }
+  };
 
   return (
     <section id="aboutme" ref={aboutMeRef}>
