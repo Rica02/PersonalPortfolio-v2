@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   z-index: 1;
   bottom: 0;
   right: 0;
-  padding: 10px 0 80px 0;
+  padding-bottom: 80px;
   overflow-x: hidden;
   background-color: ${({ theme }) => theme.bgNavbar};
 
@@ -63,7 +63,9 @@ export const NavbarExtendedButton = styled.div`
 `;
 
 export const ButtonsContainer = styled.div`
-  //border: red solid 1px;
+  display: flex;
+  width: 100%;
+  padding: 20px;
 `;
 
 export const NavLinksContainer = styled.div`

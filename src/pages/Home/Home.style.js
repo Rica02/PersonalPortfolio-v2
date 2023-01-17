@@ -125,7 +125,7 @@ export const ActionButton = styled.button`
   border-radius: 6px;
   color: ${({ theme }) => theme.bgBase};
   background-color: ${({ theme }) => theme.highlightSecondary};
-  padding: 8px 5px;
+  padding: 8px;
   margin-bottom: 15px;
   transition: all 0.25s linear;
 

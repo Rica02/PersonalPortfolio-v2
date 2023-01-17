@@ -1,7 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { IoMdDownload } from "react-icons/io";
+import { HiDocumentText } from "react-icons/hi";
 import { useNav } from "../../hooks/useNav";
 import {
   Container,
@@ -53,7 +53,7 @@ const Home = () => {
                   window.open(resumeFile, "_blank");
                 }}
               >
-                <IoMdDownload />
+                <HiDocumentText />
                 &nbsp;RESUME
               </ActionButton>
               <ActionButton

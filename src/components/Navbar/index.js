@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import { NavContext } from "../../context/NavContext";
+import SocialButtons from "../SocialButtons";
 import {
   Nav,
   NavExtended,
@@ -11,7 +12,7 @@ import {
   ButtonsContainer,
 } from "./Navbar.style";
 
-export default function Navbar() {
+const Navbar = () => {
   const { activeLinkId } = useContext(NavContext); // Current section ID in view
   const [extendNavbar, setExtendNavbar] = useState(false); // Opens extended menu when screen is small
 
@@ -45,7 +46,9 @@ export default function Navbar() {
     <>
       {/* Side bar (wide screens)*/}
       <Nav>
-        <ButtonsContainer>test</ButtonsContainer>
+        <ButtonsContainer>
+          <SocialButtons />
+        </ButtonsContainer>
         <NavLinksContainer>
           <Links />
         </NavLinksContainer>
@@ -74,4 +77,6 @@ export default function Navbar() {
       </NavbarExtendedButton>
     </>
   );
-}
+};
+
+export default Navbar;
