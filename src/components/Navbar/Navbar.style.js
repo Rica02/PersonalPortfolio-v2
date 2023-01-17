@@ -66,6 +66,12 @@ export const ButtonsContainer = styled.div`
   display: flex;
   width: 100%;
   padding: 20px;
+  margin-top: 0;
+  transition: margin 0.3s linear;
+
+  &.hidden {
+    margin-top: -70px;
+  }
 `;
 
 export const NavLinksContainer = styled.div`

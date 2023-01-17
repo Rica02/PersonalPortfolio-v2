@@ -35,7 +35,7 @@ const Navbar = () => {
             className={activeLinkId === link.replace(/\s/g, "") ? "active" : ""}
             onClick={() => handleClickNav(link.replace(/\s/g, ""))}
           >
-            {link} <span className="indicator">&lt;</span>{" "}
+            {link} <span className="indicator">&lt;</span>
           </NavLink>
         ))}
       </>
@@ -46,7 +46,7 @@ const Navbar = () => {
     <>
       {/* Side bar (wide screens)*/}
       <Nav>
-        <ButtonsContainer>
+        <ButtonsContainer className={activeLinkId === "home" ? "hidden" : ""}>
           <SocialButtons />
         </ButtonsContainer>
         <NavLinksContainer>
