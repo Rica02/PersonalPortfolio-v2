@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNav } from "../../hooks/useNav";
 import {
   MainBodyContainer,
@@ -9,41 +9,40 @@ import {
 } from "./ContactMe.style";
 import emailjs from "@emailjs/browser";
 
-const SERVICE_ID = "";
-const TEMPLATE_ID = "";
-const USER_ID = "";
-
 const ContactMe = () => {
   const contactMeRef = useNav("contactme");
-
-  const [senderName, setSenderName] = useState("");
-  const [senderEmail, setSenderEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
   const [emailSent, setEmailSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (senderName && senderEmail && message) {
-      if (isValidEmail(senderEmail)) {
-        const templateParams = {
-          senderName,
-          senderEmail,
-          message,
-        };
+    // Validate form
+    if (
+      document.getElementById("user_name").value &&
+      document.getElementById("user_email").value &&
+      document.getElementById("message").value
+    ) {
+      if (isValidEmail(document.getElementById("user_email").value)) {
+        // Send email
+        emailjs
+          .sendForm(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            form.current,
+            process.env.REACT_APP_USER_ID
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID).then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-
-        setSenderName("");
-        setSenderEmail("");
-        setMessage("");
+        // Clear form and show confirmation message
+        document.getElementById("contact-form").reset();
         setEmailSent(true);
       } else {
         alert("Please enter a valid email.");
@@ -53,6 +52,7 @@ const ContactMe = () => {
     }
   };
 
+  // Email validation
   const isValidEmail = (email) => {
     const regex =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -66,7 +66,7 @@ const ContactMe = () => {
           <h1>Contact me</h1>
         </header>
         <MainBodyContainer>
-          <FormContainer>
+          <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
             <p>
               Want to get in touch with me? You can reach me with the form
               below!
@@ -75,23 +75,19 @@ const ContactMe = () => {
               I'm open for job offers and available on a full-time capacity.
             </p>
             <Input
+              id="user_name"
               type="text"
+              name="user_name"
               placeholder="Name"
-              value={senderName}
-              onChange={(e) => setSenderName(e.target.value)}
             />
             <Input
+              id="user_email"
               type="email"
+              name="user_email"
               placeholder="Email"
-              value={senderEmail}
-              onChange={(e) => setSenderEmail(e.target.value)}
             />
-            <TextArea
-              placeholder="Your message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></TextArea>
-            <SendButton onClick={sendEmail}>SEND MESSAGE</SendButton>
+            <TextArea id="message" name="message" placeholder="Your message" />
+            <SendButton type="submit" value="SEND MESSAGE" />
             <span className={emailSent ? "visible" : null}>
               Thank you for your message, I will get back to you as soon as
               possible!

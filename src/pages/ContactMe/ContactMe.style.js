@@ -16,7 +16,7 @@ export const MainBodyContainer = styled.div`
   }
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,14 +85,14 @@ export const TextArea = styled.textarea`
   }
 `;
 
-export const SendButton = styled.button`
+export const SendButton = styled.input`
   cursor: pointer;
   color: ${({ theme }) => theme.highlightSecondary};
   background: ${({ theme }) => theme.bgBase};
   border: ${({ theme }) => theme.highlightSecondary} solid;
   border-radius: 6px;
   padding: 10px 30px;
-  font-size: large;
+  font-size: ${FontSizes.body};
   margin-bottom: 15px;
 
   &:hover {
