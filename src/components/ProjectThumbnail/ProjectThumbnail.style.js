@@ -6,7 +6,6 @@ export const Container = styled.div`
   height: 150px;
   width: 150px;
   background-color: ${({ theme }) => theme.highlightMain};
-  //border: 1.5px solid ${({ theme }) => theme.highlightMain};
   position: relative;
   cursor: pointer;
 
@@ -18,17 +17,9 @@ export const Container = styled.div`
   div {
     display: none;
     position: absolute;
-    //align-self: center;
-    //height: 100%;
-    align-items: center;
     justify-content: center;
     bottom: 0;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    //background-color: rgba(0, 0, 0, 0.5);
-    //background-color: ${({ theme }) => theme.highlightMain};
-    background-color: rgba(200, 50, 150, 0.5);
+    background-color: ${({ theme }) => theme.highlightMain};
     width: 100%;
     padding: 5px 10px;
 
@@ -44,9 +35,6 @@ export const Container = styled.div`
   &:hover {
     border: 1.5px solid ${({ theme }) => theme.highlightMain};
 
-    img {
-      opacity: 0.8;
-    }
     div {
       display: flex;
     }

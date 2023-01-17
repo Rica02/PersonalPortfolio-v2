@@ -123,7 +123,7 @@ export const BgTextContainer = styled.div`
 
     p {
       font-size: ${FontSizes.headerSml};
-      margin: 10px 0;
+      margin: 10px 0 0 0;
     }
   }
 `;
