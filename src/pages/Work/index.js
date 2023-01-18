@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNav } from "../../hooks/useNav";
+import { IoCloseSharp } from "react-icons/io5";
+
 import {
   MainBodyContainer,
   Projects,
@@ -10,10 +12,12 @@ import {
 } from "./Work.style";
 import ProjectThumbnail from "../../components/ProjectThumbnail";
 import { ProjectContent } from "../../components/Content";
+import ProjectModal from "../../components/ProjectModal";
 
 const Work = () => {
   const workRef = useNav("work");
   const [modalActive, setModalActive] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     // Disable scrolling while modal is open
@@ -22,16 +26,30 @@ const Work = () => {
     } else {
       document.body.style.overflow = "unset";
     }
-  }, [modalActive]);
+  }, [modalActive, selectedProject]);
+
+  const onProjectClick = (project) => {
+    setModalActive(true);
+    setSelectedProject(project);
+  };
+
+  const onProjectClose = () => {
+    setModalActive(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section id="work" ref={workRef} style={{ position: "relative" }}>
       {/* Project details modal */}
       <Modal className={modalActive ? "modal-active" : ""}>
-        <button onClick={() => setModalActive(false)}>dismiss</button>
+        <IoCloseSharp className="icon" onClick={onProjectClose} />
+        <ProjectModal {...selectedProject} />
       </Modal>
       {/* Adds dark overlay to background when modal is open */}
-      <DarkOverlay className={modalActive ? "overlay-active" : ""} />
+      <DarkOverlay
+        className={modalActive ? "overlay-active" : ""}
+        onClick={onProjectClose}
+      />
       <div className="container">
         <header>
           <h1>Work</h1>
@@ -50,7 +68,7 @@ const Work = () => {
                 <ProjectThumbnail
                   key={index}
                   {...project}
-                  onClick={() => setModalActive(true)}
+                  onClick={() => onProjectClick(project)}
                 />
               ))}
             </ProjectList>
@@ -68,7 +86,7 @@ const Work = () => {
                 <ProjectThumbnail
                   key={index}
                   {...project}
-                  onClick={() => setModalActive(true)}
+                  onClick={() => onProjectClick(project)}
                 />
               ))}
             </ProjectList>

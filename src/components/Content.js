@@ -199,6 +199,7 @@ export const ProjectContent = {
       videoUrl: scusamiVideo,
       sourceUrl: "https://github.com/Rica02/ScusaMi-App",
       imgThumb: scusamiThumb,
+      mobileVideo: true,
     },
     {
       title: "Personal Portfolio",
@@ -215,6 +216,7 @@ export const ProjectContent = {
       videoUrl: portoflioVideo,
       sourceUrl: "",
       imgThumb: portfolioThumb,
+      mobileVideo: false,
     },
     {
       title: "TechConnect Web",
@@ -232,6 +234,7 @@ export const ProjectContent = {
       videoUrl: techConnectVideo,
       sourceUrl: "https://github.com/Rica02/TechConnect",
       imgThumb: techConnectThumb,
+      mobileVideo: false,
     },
     {
       title: "MyStory App",
@@ -240,6 +243,7 @@ export const ProjectContent = {
       videoUrl: myStoryVideo,
       sourceUrl: "https://github.com/Rica02/MyStoryApp",
       imgThumb: myStoryThumb,
+      mobileVideo: true,
     },
     {
       title: "Artic App",
@@ -248,6 +252,7 @@ export const ProjectContent = {
       videoUrl: articVideo,
       sourceUrl: "https://github.com/Rica02/ArticApp",
       imgThumb: articThumb,
+      mobileVideo: true,
     },
     {
       title: "Bookworm Den Web",
@@ -264,6 +269,7 @@ export const ProjectContent = {
       videoUrl: bookwormVideo,
       sourceUrl: "https://github.com/Rica02/BookwormDen",
       imgThumb: bookwormThumb,
+      mobileVideo: true,
     },
   ],
   OtherProjectList: [
@@ -274,6 +280,7 @@ export const ProjectContent = {
       videoUrl: scusamiVideo,
       sourceUrl: "https://github.com/Rica02/ScusaMi-App",
       imgThumb: scusamiThumb,
+      mobileVideo: true,
     },
   ],
 };

@@ -55,7 +55,6 @@ export const ProjectList = styled.div`
 
   @media screen and (max-width: 400px) {
     // Makes sure projects are shown in two columns even in even smaller screens
-    //grid-template-columns: repeat(auto-fill, 120px);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill, auto);
     grid-gap: 1rem;
@@ -91,24 +90,22 @@ export const DarkOverlay = styled.div`
 `;
 
 export const Modal = styled.div`
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 350px;
-  height: 280px;
-  padding: 30px 20px;
-  border-radius: 10px;
-  z-index: 2;
-  box-sizing: border-box;
-  text-align: center;
-  opacity: 0;
   top: -200%;
+  left: 50%;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+  max-height: 900px;
+  background-color: ${({ theme }) => theme.bgDarker};
+  border: ${({ theme }) => theme.highlightMain} solid 1px;
+  opacity: 0;
+  z-index: 2;
   transform: translate(-50%, -50%) scale(0.5);
   transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     transform 1s ease-in-out;
-
-  background-color: white;
-  border: 1px red solid;
 
   &.modal-active {
     opacity: 1;
@@ -117,8 +114,23 @@ export const Modal = styled.div`
     transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
   }
 
-  &-overlay {
-    background: rgba(0, 0, 0, 0.5);
+  .icon {
+    align-self: flex-end;
+    font-size: 30px;
+    color: white;
+    color: ${({ theme }) => theme.highlightMain};
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.1s linear;
+    //border: 0px solid ${({ theme }) => theme.highlightMain};
+    border-radius: 100px;
+    //padding: 2px;
+
+    &:hover {
+      color: white;
+      //border: 2px solid ${({ theme }) => theme.highlightMain};
+      background-color: ${({ theme }) => theme.highlightMain};
+    }
   }
 `;
 
