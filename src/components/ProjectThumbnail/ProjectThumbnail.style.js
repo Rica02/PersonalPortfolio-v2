@@ -33,7 +33,7 @@ export const Container = styled.div`
   }
 
   &:hover {
-    border: 1.5px solid ${({ theme }) => theme.highlightMain};
+    border: 2px solid ${({ theme }) => theme.highlightMain};
 
     div {
       display: flex;
@@ -41,8 +41,9 @@ export const Container = styled.div`
   }
 
   // Makes sure projects are shown in two columns even in even smaller screens
-  @media screen and (max-width: 390px) {
-    height: 120px;
-    width: 120px;
+  @media screen and (max-width: 400px) {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 `;

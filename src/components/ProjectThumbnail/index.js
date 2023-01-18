@@ -3,7 +3,7 @@ import { Container } from "./ProjectThumbnail.style";
 
 const ProjectThumbnail = (props) => {
   return (
-    <Container>
+    <Container onClick={props.onClick}>
       <img src={props.imgThumb} alt="project thumbnail" />
       <div>
         <p>{props.title}</p>
