@@ -72,6 +72,12 @@ export const LeftContainer = styled.div`
     max-width: 100%;
   }
 
+  img {
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
   @media screen and (max-width: 768px) {
     margin: 0 20px 10px 20px;
   }
@@ -94,7 +100,7 @@ export const RightContainer = styled.div`
 export const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 
   flex: 1;
   //border: black 1px solid;
@@ -103,10 +109,16 @@ export const DescContainer = styled.div`
     margin: 0;
     font-size: ${FontSizes.body};
     line-height: 150%;
+    white-space: pre-line;
   }
 
   @media screen and (max-width: 768px) {
     flex: 1;
+    gap: 15px;
+
+    p {
+      font-size: ${FontSizes.bodySml};
+    }
   }
 `;
 
@@ -129,6 +141,7 @@ export const ToolsUsed = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+
     img {
       height: 35px;
     }
@@ -146,6 +159,7 @@ export const SourceButton = styled.button`
   border-radius: 10px;
   padding: 8px 15px;
   transition: all 0.25s linear;
+  margin: 10px;
 
   &:hover {
     cursor: pointer;

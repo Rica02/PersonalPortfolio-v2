@@ -15,7 +15,7 @@ export const DescriptionContainer = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  white-space: pre-wrap;
+  white-space: pre-line;
   max-height: 250px;
   padding: 20px 40px 10px 40px;
 

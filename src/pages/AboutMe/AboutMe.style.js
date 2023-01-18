@@ -29,7 +29,7 @@ export const IntroContainer = styled.div`
   justify-content: center;
   font-size: ${FontSizes.body};
   text-align: center;
-  white-space: pre-wrap;
+  white-space: pre-line;
   line-height: 150%;
 
   .aboutMeName {
@@ -97,7 +97,7 @@ export const CardDescription = styled.div`
   p {
     font-size: ${FontSizes.body};
     margin: 0;
-    white-space: wrap;
+    white-space: pre-line;
   }
 
   @media screen and (max-width: 768px) {

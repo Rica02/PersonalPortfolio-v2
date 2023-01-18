@@ -1,8 +1,8 @@
 # Rica's Personal Portfolio
 
-Website developed as a portfolio to showcase my skills and work. I designed and developed it myself from scratch.
+Website developed as a portfolio to showcase my skills and work. Designed and developed by me from scratch.
 
-The only external libraries installed are react-icons for icons, styled-components for style management and emailjs for the contact form.
+The only external libraries I installed and used are react-icons for icons, styled-components for style management and emailjs for the contact form.
 
 Current version: 2.0 (last updated January 2023)
 

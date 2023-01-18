@@ -32,6 +32,8 @@ import logoFigma from "../assets/logos/logo-figma.png";
 import logoInkscape from "../assets/logos/logo-inkscape.png";
 import logoProcreate from "../assets/logos/logo-procreate.png";
 
+import playtodayThumb from "../assets/projects/playtoday-thumb.png";
+import playtodayImg from "../assets/projects/playtoday-img.png";
 import scusamiThumb from "../assets/projects/scusami-thumb.png";
 import scusamiVideo from "../assets/projects/scusami-video.mov";
 import portoflioVideo from "../assets/projects/portfolio-video.mov";
@@ -196,7 +198,7 @@ export const ProjectContent = {
   MyProjectList: [
     {
       title: "Scusa Mi! App",
-      desc: "Mobile application prototype for a local popular Italian restaurant. Designed and developed by me from scratch with React Native (Expo) using TypeScript.",
+      desc: "Mobile application prototype for a local popular Italian restaurant. It integrates many of the restaurant's functions, such as browsing the menu, placing orders, making reservations and creating an account.\n\nDesigned and developed by me from scratch with TypeScript and React Native.",
       tools: [logoVscode, logoTS, logoReactNat],
       videoUrl: scusamiVideo,
       sourceUrl: "https://github.com/Rica02/ScusaMi-App",
@@ -206,7 +208,7 @@ export const ProjectContent = {
     },
     {
       title: "Personal Portfolio",
-      desc: "Website developed as a portfolio to showcase my skills and work. I built it from scratch and used the fullPage.js component for the scrolling style navigation. Project still in development.",
+      desc: "Website developed as a portfolio to showcase my skills and work. I designed and developed by me from scratch using JavaScript and React.\n\nLast updated: January 2023.",
       tools: [logoVscode, logoJS, logoHtml, logoCss, logoReact, logoStyledComp],
       videoUrl: portoflioVideo,
       sourceUrl: "https://github.com/Rica02/PersonalPortfolio-v2",
@@ -216,7 +218,7 @@ export const ProjectContent = {
     },
     {
       title: "TechConnect Web",
-      desc: "Web app project developed in a small team. TechConnect is a business idea that provides face-to-face and online tutoring services to users wanting learn how to use tech devices.\n\nI worked on this project as a front-end designer and developer, and on the Zoom API integration.",
+      desc: "Web app project developed in a small team. TechConnect is a business idea that provides tutoring services to users wanting to learn about tech devices.\n\nI worked on this project as a front-end designer and developer, and on the Zoom API back-end integration.",
       tools: [
         logoVscode,
         logoJS,
@@ -255,7 +257,7 @@ export const ProjectContent = {
     },
     {
       title: "Bookworm Den Web",
-      desc: "Web app project developed with a team mate. Bookworm Den is a simple online library where users can browse books, view book information and leave reviews.",
+      desc: "Web app project developed in a small team. Bookworm Den is a simple online library where users can browse books, view book information and leave reviews.",
       tools: [
         logoVscode,
         logoJS,
@@ -275,12 +277,13 @@ export const ProjectContent = {
   OtherProjectList: [
     {
       title: "Play Today.",
-      desc: "Mobile application prototype for a local popular Italian restaurant. Designed and developed by me from scratch with React Native (Expo) using TypeScript.",
+      desc: "Live cross-platform mobile app for golf players that provides users with digital scoring for competitions, live leaderboards, GPS functionality and more.\n\nI worked on this project as a front-end React Native developer.",
       tools: [logoVscode, logoTS, logoReactNat],
-      videoUrl: scusamiVideo,
-      sourceUrl: "https://github.com/Rica02/ScusaMi-App",
-      imgThumb: scusamiThumb,
-      mobileVideo: true,
+      videoUrl: "",
+      img: playtodayImg,
+      sourceUrl: "",
+      imgThumb: playtodayThumb,
+      mobileVideo: false,
       gallery: [],
     },
   ],
