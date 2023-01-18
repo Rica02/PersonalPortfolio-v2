@@ -41,7 +41,7 @@ export const Container = styled.div`
   }
 
   // Makes sure projects are shown in two columns even in even smaller screens
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
     height: 100%;
     width: 100%;
     aspect-ratio: 1 / 1;
