@@ -25,13 +25,18 @@ export const NavExtended = styled.nav`
   display: flex;
   background-color: ${({ theme }) => theme.bgNavbar};
   position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
+  top: -100%;
+  left: 0;
+  width: 100vw;
   height: 100vh;
   align-items: center;
   justify-content: center;
   z-index: 1;
+  transition: top 0.5s ease-in-out;
+
+  &.active {
+    top: 0%;
+  }
 
   @media screen and (min-width: 900px) {
     display: none;

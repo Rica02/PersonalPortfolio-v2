@@ -116,11 +116,19 @@ export const ToolsUsed = styled.div`
   flex-wrap: wrap;
   gap: 20px;
 
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
   img {
     height: 40px;
   }
 
   @media screen and (max-width: 768px) {
+    flex-direction: column;
     img {
       height: 35px;
     }

@@ -39,10 +39,12 @@ const ProjectModal = (props) => {
             <p>{props.desc}</p>
             <ToolsUsed>
               <p>Tools used:</p>
-              {props.tools &&
-                props.tools.map((img, index) => (
-                  <img key={index} src={img} alt="tool logo" />
-                ))}
+              <div>
+                {props.tools &&
+                  props.tools.map((img, index) => (
+                    <img key={index} src={img} alt="tool logo" />
+                  ))}
+              </div>
             </ToolsUsed>
             {props.sourceUrl && (
               <SourceButton

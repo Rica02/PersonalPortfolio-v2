@@ -102,7 +102,6 @@ export const Modal = styled.div`
   max-height: 900px;
   border: ${({ theme }) => theme.highlightMain} solid 1px;
   opacity: 0;
-
   transform: translate(-50%, -50%) scale(0.5);
   transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     transform 1s ease-in-out;
@@ -123,15 +122,16 @@ export const Modal = styled.div`
     max-height: none;
     background-color: ${({ theme }) => theme.bgDarker};
     border: none;
-    opacity: 1;
+    opacity: 0;
     transform: none;
-    transition: opacity 0s, top 0.5s ease-in-out, transform 0s;
+    // TODO: fix resizing bug (check position states)
+    transition: opacity 20s, top 0.5s ease-in-out, transform 0s;
 
     &.modal-active {
       opacity: 1;
       top: 0%;
       transform: none;
-      transition: transform 0s, top 0.5s ease-in-out;
+      transition: opacity 0s, transform 0s, top 0.5s ease-in-out;
     }
   }
 `;
