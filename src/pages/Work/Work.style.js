@@ -115,22 +115,6 @@ export const Modal = styled.div`
     transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.19);
   }
 
-  .icon {
-    align-self: flex-end;
-    font-size: 30px;
-    color: white;
-    color: ${({ theme }) => theme.highlightMain};
-    cursor: pointer;
-    margin: 15px 15px 0 0;
-    transition: all 0.1s linear;
-    border-radius: 100px;
-
-    &:hover {
-      color: white;
-      background-color: ${({ theme }) => theme.highlightMain};
-    }
-  }
-
   @media screen and (max-width: 768px) {
     top: 100%;
     left: 0;

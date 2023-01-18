@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNav } from "../../hooks/useNav";
-import { IoCloseSharp } from "react-icons/io5";
 
 import {
   MainBodyContainer,
@@ -42,8 +41,7 @@ const Work = () => {
     <section id="work" ref={workRef} style={{ position: "relative" }}>
       {/* Project details modal */}
       <Modal className={modalActive ? "modal-active" : ""}>
-        <IoCloseSharp className="icon" onClick={onProjectClose} />
-        <ProjectModal {...selectedProject} />
+        <ProjectModal {...selectedProject} onProjectClose={onProjectClose} />
       </Modal>
       {/* Adds dark overlay to background when modal is open */}
       <DarkOverlay
