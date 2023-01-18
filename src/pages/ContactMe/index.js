@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import { useNav } from "../../hooks/useNav";
 import {
   MainBodyContainer,
   FormContainer,
@@ -7,6 +6,7 @@ import {
   SendButton,
   TextArea,
 } from "./ContactMe.style";
+import { useNav } from "../../hooks/useNav";
 import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
@@ -52,7 +52,7 @@ const ContactMe = () => {
     }
   };
 
-  // Email validation
+  // Email validation (simple regex)
   const isValidEmail = (email) => {
     return email.match(/^\S+@\S+\.\S+$/);
   };
@@ -64,6 +64,7 @@ const ContactMe = () => {
           <h1>Contact me</h1>
         </header>
         <MainBodyContainer>
+          {/* Contact me form */}
           <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
             <p>
               Want to get in touch with me? You can reach me with the form

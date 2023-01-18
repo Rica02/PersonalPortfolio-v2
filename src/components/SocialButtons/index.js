@@ -9,6 +9,7 @@ import resumeFile from "../../assets/resume.pdf";
 const SocialButtons = () => {
   return (
     <Container>
+      {/* On hover, show text above icon */}
       <div>
         <p>resume</p>
         <HiDocumentText

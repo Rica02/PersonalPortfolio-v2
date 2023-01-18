@@ -13,6 +13,7 @@ export const MainBodyContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding: 20px;
   }
 `;
 
@@ -40,7 +41,6 @@ export const FormContainer = styled.form`
 
   @media screen and (max-height: 768px) {
     width: 100%;
-    padding: 20px;
 
     p {
       font-size: ${FontSizes.body};

@@ -117,11 +117,10 @@ export const NavLink = styled.p`
 
   @media screen and (max-width: 900px) {
     margin: 15px 0;
-    font-size: ${FontSizes.title};
+    font-size: ${FontSizes.headerSml};
   }
 
   @media screen and (max-width: 768px) {
     margin: 25px 0;
-    font-size: ${FontSizes.headerSml};
   }
 `;

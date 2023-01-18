@@ -60,6 +60,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.highlightSecondary};
   }
 
+  // Background text
   .txtFaded {
     font-family: monospace;
     opacity: 0.2;

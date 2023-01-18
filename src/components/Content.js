@@ -45,6 +45,7 @@ import articVideo from "../assets/projects/artic-video.mp4";
 import bookwormVideo from "../assets/projects/bookwormden-video.mov";
 import bookwormThumb from "../assets/projects/bookwormden-thumb.png";
 
+// ABOUT ME
 export const AboutMeContent = {
   Name: "My name is Rica Mae Averion, call me Rica! It's nice to meet you.",
   Intro:
@@ -69,6 +70,7 @@ export const AboutMeContent = {
   ],
 };
 
+// SKILLS
 export const SkillsContent = {
   SkillDesc:
     "I've worked on various web and mobile app projects both on the front-end and back-end sides. My strength is in front-end design and development. Main tools I've worked with include JavaScript/TypeScript, Java, Objective C, React, React Native, Node.js, Firebase and MySQL.",
@@ -189,11 +191,11 @@ export const SkillsContent = {
   ],
 };
 
+// PROJECTS
 export const ProjectContent = {
   MyProjectList: [
     {
       title: "Scusa Mi! App",
-      // Max ~50 words
       desc: "Mobile application prototype for a local popular Italian restaurant. Designed and developed by me from scratch with React Native (Expo) using TypeScript.",
       tools: [logoVscode, logoTS, logoReactNat],
       videoUrl: scusamiVideo,

@@ -2,7 +2,6 @@ import React from "react";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiDocumentText } from "react-icons/hi";
-import { useNav } from "../../hooks/useNav";
 import {
   Container,
   BackgroundContainer,
@@ -13,11 +12,13 @@ import {
   SocialContainer,
   ActionButton,
 } from "./Home.style";
+import { useNav } from "../../hooks/useNav";
 import resumeFile from "../../assets/resume.pdf";
 
 const Home = () => {
   const homeRef = useNav("home");
 
+  // Background text
   const HelloWorld = () => {
     return (
       <p className="txtFaded">
@@ -33,6 +34,7 @@ const Home = () => {
     <section id="home" ref={homeRef}>
       <Container>
         <MainBodyContainer>
+          {/* Introduction */}
           <IntroContainer>
             <p>Hey there!</p>
             <h1>
@@ -43,10 +45,12 @@ const Home = () => {
               <HelloWorld />
             </div>
           </IntroContainer>
+          {/* Background text */}
           <BackgroundContainer>
             <HelloWorld />
           </BackgroundContainer>
           <BottomContainer>
+            {/* Social buttons */}
             <ButtonsContainer>
               <ActionButton
                 onClick={() => {

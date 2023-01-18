@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: ${({ theme }) => theme.bgBase};
 `;
 
 export const HeaderContainer = styled.div`
@@ -18,8 +19,6 @@ export const HeaderContainer = styled.div`
     font-weight: normal;
     padding-bottom: 10px;
     margin: 0 30px;
-
-    //border: black solid 1px;
     border-bottom: ${({ theme }) => theme.highlightSecondary} 1px solid;
   }
 
@@ -65,7 +64,7 @@ export const LeftContainer = styled.div`
   justify-content: center;
   position: relative;
   margin: 0 15px 15px 15px;
-  //background-color: black;
+  background-color: ${({ theme }) => theme.bgDarker};
 
   video {
     position: absolute;
@@ -83,8 +82,8 @@ export const RightContainer = styled.div`
   flex: ${(props) => (props.mobileVideo ? 2 : 1)};
   flex-direction: column;
   gap: 20px;
-  padding: 5px 20px 20px 20px;
-  border: black 1px solid;
+  padding: 20px;
+  //border: black 1px solid;
 
   @media screen and (max-width: 768px) {
     flex: 2;
@@ -96,7 +95,9 @@ export const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: black 1px solid;
+
+  flex: 1;
+  //border: black 1px solid;
 
   p {
     margin: 0;
@@ -146,10 +147,16 @@ export const SourceButton = styled.button`
 
 export const GalleryContainer = styled.div`
   display: ${(props) => (props.mobileVideo ? "none" : "flex")};
-  flex: 1;
-  border: black 1px solid;
+  //flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: ${FontSizes.title};
+  font-style: italic;
+  font-weight: bold;
+  opacity: 0.2;
+  //border: black 1px solid;
 
   @media screen and (max-width: 768px) {
-    flex: 1;
+    font-size: ${FontSizes.body};
   }
 `;

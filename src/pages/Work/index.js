@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useNav } from "../../hooks/useNav";
-
 import {
   MainBodyContainer,
   Projects,
@@ -9,6 +7,7 @@ import {
   Modal,
   DarkOverlay,
 } from "./Work.style";
+import { useNav } from "../../hooks/useNav";
 import ProjectThumbnail from "../../components/ProjectThumbnail";
 import { ProjectContent } from "../../components/Content";
 import ProjectModal from "../../components/ProjectModal";
@@ -27,11 +26,13 @@ const Work = () => {
     }
   }, [modalActive, selectedProject]);
 
+  // On click, open project details modal
   const onProjectClick = (project) => {
     setModalActive(true);
     setSelectedProject(project);
   };
 
+  // Close modal and reset selected project
   const onProjectClose = () => {
     setModalActive(false);
     setSelectedProject(null);
@@ -43,7 +44,7 @@ const Work = () => {
       <Modal className={modalActive ? "modal-active" : ""}>
         <ProjectModal {...selectedProject} onProjectClose={onProjectClose} />
       </Modal>
-      {/* Adds dark overlay to background when modal is open */}
+      {/* This adds a dark overlay to the background when modal is open */}
       <DarkOverlay
         className={modalActive ? "overlay-active" : ""}
         onClick={onProjectClose}
@@ -53,6 +54,7 @@ const Work = () => {
           <h1>Work</h1>
         </header>
         <MainBodyContainer>
+          {/* My projects */}
           <Projects>
             <TitleContainer>
               <h2>My Projects</h2>
@@ -71,6 +73,7 @@ const Work = () => {
               ))}
             </ProjectList>
           </Projects>
+          {/* Other Projects */}
           <Projects>
             <TitleContainer>
               <h2>Other Projects</h2>

@@ -1,5 +1,4 @@
 import React from "react";
-import { useNav } from "../../hooks/useNav";
 import {
   MainBodyContainer,
   IntroContainer,
@@ -10,6 +9,7 @@ import {
   CardsContainer,
   UpperContainer,
 } from "./AboutMe.style";
+import { useNav } from "../../hooks/useNav";
 import { AboutMeContent } from "../../components/Content";
 
 const AboutMe = () => {
@@ -41,15 +41,18 @@ const AboutMe = () => {
           <h1>About me</h1>
         </header>
         <MainBodyContainer>
+          {/* Introduction */}
           <UpperContainer>
             <IntroContainer>
               <p className="aboutMeName">{AboutMeContent.Name}</p>
               <p>{AboutMeContent.Intro}</p>
             </IntroContainer>
+            {/* About me cards */}
             <CardsContainer>
               <Cards />
             </CardsContainer>
           </UpperContainer>
+          {/* Background text */}
           <BgTextContainer>
             <p className="txtFaded">
               <span className="txtHighlightSecondary">&gt;</span> continue (

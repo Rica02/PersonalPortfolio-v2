@@ -1,5 +1,4 @@
 import React from "react";
-import { useNav } from "../../hooks/useNav";
 import {
   MainBodyContainer,
   DescriptionContainer,
@@ -11,11 +10,13 @@ import {
   Skill,
   SkillList,
 } from "./Skills.style";
+import { useNav } from "../../hooks/useNav";
 import { SkillsContent } from "../../components/Content";
 
 const Skills = () => {
   const skillsRef = useNav("skills");
 
+  // List of skills as icons
   const Skills = () => {
     return (
       <SkillListContainer>
@@ -49,10 +50,13 @@ const Skills = () => {
           <h1>Skills</h1>
         </header>
         <MainBodyContainer>
+          {/* Description */}
           <DescriptionContainer>
             <p className="skillDesc">{SkillsContent.SkillDesc}</p>
+            {/* Background text */}
             <p className="txtFaded bgText">loading...</p>
           </DescriptionContainer>
+          {/* List of skills */}
           <SkillsContainer>
             <p>I have worked with the following tools:</p>
             <Skills />

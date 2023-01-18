@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
-import { NavContext } from "../../context/NavContext";
-import SocialButtons from "../SocialButtons";
 import {
   Nav,
   NavExtended,
@@ -11,6 +9,8 @@ import {
   NavLink,
   ButtonsContainer,
 } from "./Navbar.style";
+import { NavContext } from "../../context/NavContext";
+import SocialButtons from "../SocialButtons";
 
 const Navbar = () => {
   const { activeLinkId } = useContext(NavContext); // Current section ID in view

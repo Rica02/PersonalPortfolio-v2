@@ -100,7 +100,6 @@ export const Modal = styled.div`
   height: 90vh;
   max-width: 1200px;
   max-height: 900px;
-  background-color: ${({ theme }) => theme.bgDarker};
   border: ${({ theme }) => theme.highlightMain} solid 1px;
   opacity: 0;
 

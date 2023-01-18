@@ -27,11 +27,11 @@ function App() {
   });
 
   return (
-    // Provides theme colours
+    // Theme colours
     <ThemeProvider theme={Theme}>
-      {/* Checks which section is currently in view */}
+      {/* Navigation tracker */}
       <NavProvider>
-        {/* Styles used throughout the website */}
+        {/* Commonly used styles */}
         <GlobalStyles />
         {/* Navigation bar */}
         <Navbar />

@@ -16,11 +16,13 @@ import {
 const ProjectModal = (props) => {
   return (
     <Container>
+      {/* Title and X button */}
       <HeaderContainer>
         <h2>{props.title}</h2>
         <IoCloseSharp className="icon" onClick={props.onProjectClose} />
       </HeaderContainer>
       <Wrapper>
+        {/* Video */}
         <LeftContainer>
           <video key={props.videoUrl} controls autoPlay loop muted>
             <source src={props.videoUrl} type="video/mov" />
@@ -31,6 +33,7 @@ const ProjectModal = (props) => {
             </p>
           </video>
         </LeftContainer>
+        {/* Project info */}
         <RightContainer mobileVideo={props.mobileVideo}>
           <DescContainer>
             <p>{props.desc}</p>
@@ -52,8 +55,10 @@ const ProjectModal = (props) => {
               </SourceButton>
             )}
           </DescContainer>
-          {props.gallery && props.gallery.length > 0 && (
-            <GalleryContainer>gallery</GalleryContainer>
+          {/* TODO: add image gallery */}
+          {/* {props.gallery && props.gallery.length > 0 && ( */}
+          {true > 0 && (
+            <GalleryContainer>Image gallery coming soon...</GalleryContainer>
           )}
         </RightContainer>
       </Wrapper>
