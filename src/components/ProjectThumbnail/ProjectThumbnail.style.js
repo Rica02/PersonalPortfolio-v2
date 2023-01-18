@@ -40,10 +40,13 @@ export const Container = styled.div`
     }
   }
 
-  // Makes sure projects are shown in two columns even in even smaller screens
   @media screen and (max-width: 768px) {
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 120px;
+    width: 120px;
+  }
+  // Makes sure projects are shown in two columns even in even smaller screens
+  @media screen and (max-width: 350px) {
+    height: 100px;
+    width: 100px;
   }
 `;

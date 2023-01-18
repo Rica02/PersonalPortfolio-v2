@@ -53,11 +53,13 @@ export const ProjectList = styled.div`
   grid-gap: 1rem;
   justify-content: space-evenly;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 120px);
+  }
+
+  @media screen and (max-width: 350px) {
     // Makes sure projects are shown in two columns even in even smaller screens
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fill, auto);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 100px);
   }
 `;
 
