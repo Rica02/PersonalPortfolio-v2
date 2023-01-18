@@ -24,14 +24,18 @@ const ProjectModal = (props) => {
       <Wrapper>
         {/* Video */}
         <LeftContainer>
-          <video key={props.videoUrl} controls autoPlay loop muted>
-            <source src={props.videoUrl} type="video/mov" />
-            <source src={props.videoUrl} type="video/mp4" />
-            <p>
-              Sorry, it looks like your browser doesn't support this embedded
-              video.
-            </p>
-          </video>
+          {props.videoUrl && (
+            <video key={props.videoUrl} controls autoPlay loop muted>
+              <source src={props.videoUrl} type="video/mov" />
+              <source src={props.videoUrl} type="video/mp4" />
+              <p>
+                Sorry, it looks like your browser doesn't support this embedded
+                video.
+              </p>
+            </video>
+          )}
+          {/* Alternative if video is not available */}
+          {props.img && <img src={props.img} />}
         </LeftContainer>
         {/* Project info */}
         <RightContainer mobileVideo={props.mobileVideo}>
