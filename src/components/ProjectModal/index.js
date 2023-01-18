@@ -19,7 +19,7 @@ const ProjectModal = (props) => {
           className={props.mobileVideo ? "mobile-video" : "web-video"}
         >
           <VideoContainer>
-            <video key={props.videoUrl} controls autoPlay loop muted>
+            <video key={props.videoUrl} autoPlay loop muted>
               <source src={props.videoUrl} type="video/mov" />
               <source src={props.videoUrl} type="video/mp4" />
               <p>

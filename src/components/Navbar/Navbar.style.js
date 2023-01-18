@@ -40,14 +40,12 @@ export const NavExtended = styled.nav`
 
 export const NavbarExtendedButton = styled.div`
   display: block;
-  width: 70px;
-  height: 50px;
   font-size: 45px;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
-  margin: 5px;
+  padding: 15px;
 
   button {
     cursor: pointer;

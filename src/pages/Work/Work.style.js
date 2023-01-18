@@ -93,6 +93,7 @@ export const Modal = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 2;
   top: -200%;
   left: 50%;
   width: 90vw;
@@ -102,7 +103,7 @@ export const Modal = styled.div`
   background-color: ${({ theme }) => theme.bgDarker};
   border: ${({ theme }) => theme.highlightMain} solid 1px;
   opacity: 0;
-  z-index: 2;
+
   transform: translate(-50%, -50%) scale(0.5);
   transition: opacity 0.3s ease-in-out, top 1s ease-in-out,
     transform 1s ease-in-out;
@@ -111,7 +112,7 @@ export const Modal = styled.div`
     opacity: 1;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.43, 1.19);
   }
 
   .icon {
@@ -120,16 +121,34 @@ export const Modal = styled.div`
     color: white;
     color: ${({ theme }) => theme.highlightMain};
     cursor: pointer;
-    margin: 10px;
+    margin: 15px 15px 0 0;
     transition: all 0.1s linear;
-    //border: 0px solid ${({ theme }) => theme.highlightMain};
     border-radius: 100px;
-    //padding: 2px;
 
     &:hover {
       color: white;
-      //border: 2px solid ${({ theme }) => theme.highlightMain};
       background-color: ${({ theme }) => theme.highlightMain};
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    background-color: ${({ theme }) => theme.bgDarker};
+    border: none;
+    opacity: 1;
+    transform: none;
+    transition: opacity 0s, top 0.5s ease-in-out, transform 0s;
+
+    &.modal-active {
+      opacity: 1;
+      top: 0%;
+      transform: none;
+      transition: transform 0s, top 0.5s ease-in-out;
     }
   }
 `;

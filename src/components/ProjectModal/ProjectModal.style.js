@@ -12,13 +12,21 @@ export const TitleContainer = styled.div`
   font-size: ${FontSizes.subheaderBig};
   text-align: center;
   margin: 0 auto;
-  padding: 0 30px 10px 30px;
+  padding: 0 20px 5px 20px;
   border-bottom: ${({ theme }) => theme.highlightSecondary} 1px solid;
+
+  @media screen and (max-width: 768px) {
+    font-size: ${FontSizes.subheaderSml};
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex: 1;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -51,16 +59,28 @@ export const VideoContainer = styled.div`
 export const RightContainer = styled.div`
   display: flex;
   flex: 2;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const DescContainer = styled.div`
   display: flex;
   flex: 2;
   border: black 1px solid;
+
+  @media screen and (max-width: 768px) {
+    flex: 1;
+  }
 `;
 
 export const GalleryContainer = styled.div`
   display: flex;
   flex: 1;
   border: black 1px solid;
+
+  @media screen and (max-width: 768px) {
+    flex: 1;
+  }
 `;
