@@ -25,6 +25,7 @@ export const FormContainer = styled.form`
   font-size: ${FontSizes.body};
 
   p {
+    text-align: center;
     padding-bottom: 20px;
     font-size: ${FontSizes.body};
   }

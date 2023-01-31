@@ -51,7 +51,8 @@ import bookwormThumb from "../assets/projects/bookwormden-thumb.png";
 export const AboutMeContent = {
   Name: "My name is Rica Mae Averion, call me Rica! It's nice to meet you.",
   Intro:
-    "I’m a Junior Web and Mobile App Developer, specialising in front-end design and development.\nI have worked with a variety of tools and languages in a number of projects, particularly working with HTML, CSS, JavaScript/TypeScript in React and React Native frameworks. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.\n\nI'm currently open to work and available on a full-time capacity.",
+    "I’m a Web and Mobile App Developer, specialising in front-end design and development.\nI have worked with a variety of tools and languages in a number of projects, particularly working with HTML, CSS, JavaScript/TypeScript in React and React Native frameworks. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied a Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.",
+  //\n\nI'm currently open to work and available on a full-time capacity.",
 
   CardContent: [
     {
