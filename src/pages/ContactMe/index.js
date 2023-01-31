@@ -67,11 +67,11 @@ const ContactMe = () => {
           {/* Contact me form */}
           <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
             <p>
-              Want to get in touch with me? You can reach me with the form
-              below!
+              Did I catch your eye? Feel free to contact me!
               <br />
               <br />
-              I'm open for job offers and available on a full-time capacity.
+              You can reach me with the form below :)
+              {/* I'm open for job offers and available on a full-time capacity. */}
             </p>
             <Input
               id="user_name"
