@@ -10,6 +10,7 @@ export const MainBodyContainer = styled.div`
   gap: 20px;
   max-width: 1200px;
   position: relative;
+  width: 100%;
 `;
 
 export const Projects = styled.div`

@@ -53,10 +53,15 @@ export const SkillsContainer = styled.div`
 
   > p {
     font-size: ${FontSizes.body};
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 768px) {
     padding: 10px 20px 20px 20px;
+
+    > p {
+      margin-bottom: 15px;
+    }
   }
 `;
 

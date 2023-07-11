@@ -40,7 +40,11 @@ const Home = () => {
             <h1>
               I'm <span className="txtHighlightMain">Rica</span>.
             </h1>
-            <p>WEB & MOBILE APP DEVELOPER</p>
+            <p>FRONT-END AND UI/UX DEVELOPER</p>
+            <p>
+              Web <span className="txtHighlightMain">|</span> Mobile Apps{" "}
+              <span className="txtHighlightMain">|</span> Games
+            </p>
             <div className="helloWorldSml">
               <HelloWorld />
             </div>

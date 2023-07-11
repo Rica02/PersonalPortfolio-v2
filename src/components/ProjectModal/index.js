@@ -4,7 +4,7 @@ import { BsGithub } from "react-icons/bs";
 import {
   Container,
   DescContainer,
-  GalleryContainer,
+  // GalleryContainer,
   RightContainer,
   HeaderContainer,
   LeftContainer,
@@ -61,11 +61,10 @@ const ProjectModal = (props) => {
               </SourceButton>
             )}
           </DescContainer>
-          {/* TODO: add image gallery */}
           {/* {props.gallery && props.gallery.length > 0 && ( */}
-          {true > 0 && (
+          {/* {true > 0 && (
             <GalleryContainer>Image gallery coming soon...</GalleryContainer>
-          )}
+          )} */}
         </RightContainer>
       </Wrapper>
     </Container>

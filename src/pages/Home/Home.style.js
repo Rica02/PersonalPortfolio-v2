@@ -35,13 +35,13 @@ export const IntroContainer = styled.div`
   h1 {
     text-align: center;
     font-weight: normal;
-    margin: 10px 0 25px 0;
+    margin: 0 0 30px 0;
   }
 
   p {
     text-align: center;
     font-weight: normal;
-    margin: 0;
+    margin: 0 0 15px 0;
   }
 
   .helloWorldSml {

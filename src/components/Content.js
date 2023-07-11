@@ -19,6 +19,7 @@ import logoStyledComp from "../assets/logos/logo-styled-components.png";
 
 import logoAndroid from "../assets/logos/logo-android.png";
 import logoIOS from "../assets/logos/logo-ios.png";
+import logoUnity from "../assets/logos/logo-unity.png";
 
 import logoVscode from "../assets/logos/logo-vscode.png";
 import logoVS from "../assets/logos/logo-visual-studio.png";
@@ -51,7 +52,7 @@ import bookwormThumb from "../assets/projects/bookwormden-thumb.png";
 export const AboutMeContent = {
   Name: "My name is Rica Mae Averion, call me Rica! It's nice to meet you.",
   Intro:
-    "I’m a Web and Mobile App Developer, specialising in front-end design and development.\nI have worked with a variety of tools and languages in a number of projects, particularly working with HTML, CSS, JavaScript/TypeScript in React and React Native frameworks. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied a Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.",
+    "I'm a Front-End and UI/UX developer. I have experience in working on web apps, mobile apps and games using a variety of tools and languages, particularly using JavaScript/TypeScript, HTML and CSS in React and React Native frameworks, as well as C# with the Unity game engine. Team worker, problem solver and well-organised, with an attention to detail.\n\nI have studied a Bachelor of IT at Academy of Information Technology (AIT) in Melbourne, Australia.",
   //\n\nI'm currently open to work and available on a full-time capacity.",
 
   CardContent: [
@@ -76,7 +77,7 @@ export const AboutMeContent = {
 // SKILLS
 export const SkillsContent = {
   SkillDesc:
-    "I've worked on various web and mobile app projects both on the front-end and back-end sides. My strength is in front-end design and development. Main tools I've worked with include JavaScript/TypeScript, Java, Objective C, React, React Native, Node.js, Firebase and MySQL.",
+    "I've worked on a variety of projects, and althought I specialise on the front-end side, I also have some knowledge on the back-end side. My main tasks include building and developing the UI across the different platforms, creating and maintaining the UX flow, and coding various functionalities.",
   Section: [
     {
       header: "LANGUAGES",
@@ -90,20 +91,16 @@ export const SkillsContent = {
           desc: "TypeScript",
         },
         {
-          img: logoJava,
-          desc: "Java",
+          img: logoHtml,
+          desc: "HTML",
         },
         {
-          img: logoObjC,
-          desc: "Objective C",
+          img: logoCss,
+          desc: "CSS",
         },
         {
           img: logoCSharp,
           desc: "C#",
-        },
-        {
-          img: logoCPlusPlus,
-          desc: "C++",
         },
       ],
     },
@@ -150,7 +147,16 @@ export const SkillsContent = {
       ],
     },
     {
-      header: "DATABASE",
+      header: "GAME ENGINE",
+      tools: [
+        {
+          img: logoUnity,
+          desc: "Unity",
+        },
+      ],
+    },
+    {
+      header: "BACKEND",
       tools: [
         {
           img: logoFirebase,
@@ -184,10 +190,6 @@ export const SkillsContent = {
         {
           img: logoInkscape,
           desc: "Inkscape",
-        },
-        {
-          img: logoProcreate,
-          desc: "Procreate",
         },
       ],
     },
@@ -278,8 +280,18 @@ export const ProjectContent = {
   OtherProjectList: [
     {
       title: "Play Today.",
-      desc: "Live cross-platform mobile app for golf players that provides users with digital scoring for competitions, live leaderboards, GPS functionality and more.\n\nI worked on this project as a front-end React Native developer.",
-      tools: [logoVscode, logoTS, logoReactNat],
+      desc: "I am currently working as a Front-End and UI/UX Developer on Play Today's various projects, including the website, golf scoring app and 3D game (metaverse).\n\nGolf app: Cross-platform mobile app that provides users playing golf with digital scoring for competitions, live leaderboards, GPS functionality and more.\n\nMetaverse (3D game): The world's first golf metaverse. An immersive virtual 3D world that provides innovative golf experience and engaging challenges.\n\nWeb: The website provides a connection between the game and the browser. It handles some important functionalities as well.",
+      tools: [
+        logoVscode,
+        logoJS,
+        logoTS,
+        logoHtml,
+        logoCss,
+        logoReact,
+        logoReactNat,
+        logoCSharp,
+        logoUnity,
+      ],
       videoUrl: "",
       img: playtodayImg,
       sourceUrl: "",

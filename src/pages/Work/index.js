@@ -54,17 +54,14 @@ const Work = () => {
           <h1>Work</h1>
         </header>
         <MainBodyContainer>
-          {/* My projects */}
+          {/* Projects */}
           <Projects>
             <TitleContainer>
-              <h2>My Projects</h2>
-              <p>
-                Projects I've worked on individually or in a small team. These
-                were created from scratch, from design to development.
-              </p>
+              <h2>Projects</h2>
+              <p>Projects I have or am working on.</p>
             </TitleContainer>
             <ProjectList>
-              {ProjectContent.MyProjectList.map((project, index) => (
+              {ProjectContent.OtherProjectList.map((project, index) => (
                 <ProjectThumbnail
                   key={index}
                   {...project}
@@ -73,17 +70,17 @@ const Work = () => {
               ))}
             </ProjectList>
           </Projects>
-          {/* Other Projects */}
+          {/* My projects */}
           <Projects>
             <TitleContainer>
-              <h2>Other Projects</h2>
+              <h2>My Projects</h2>
               <p>
-                Bigger projects I've contributed to working with a team in a
-                company for a client.
+                Personal projects I've worked on individually or in a small
+                team.
               </p>
             </TitleContainer>
             <ProjectList>
-              {ProjectContent.OtherProjectList.map((project, index) => (
+              {ProjectContent.MyProjectList.map((project, index) => (
                 <ProjectThumbnail
                   key={index}
                   {...project}
