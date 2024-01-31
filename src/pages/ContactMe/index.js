@@ -5,7 +5,6 @@ import {
   Input,
   SendButton,
   TextArea,
-  ContactMeButton,
 } from './ContactMe.style';
 import { useNav } from '../../hooks/useNav';
 import emailjs from '@emailjs/browser';
@@ -93,14 +92,10 @@ const ContactMe = () => {
             </span>
           </FormContainer> */}
           <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
-            <p>Did I catch your eye? Feel free to contact me!</p>
-            <ContactMeButton
-              onClick={() => {
-                window.open('mailto:ricamaeaverion22@gmail.com', '_blank');
-              }}
-            >
-              CONTACT ME @ ricamaeaverion22@gmail.com
-            </ContactMeButton>
+            <p>Did I catch your eye?</p>
+            <p>
+              CONTACT ME @ <b>ricamaeaverion22@gmail.com</b>
+            </p>
           </FormContainer>
         </MainBodyContainer>
       </div>

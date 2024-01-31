@@ -101,19 +101,3 @@ export const SendButton = styled.input`
     background-color: ${({ theme }) => theme.btnHover};
   }
 `;
-
-export const ContactMeButton = styled.button`
-  cursor: pointer;
-  color: ${({ theme }) => theme.highlightSecondary};
-  background: ${({ theme }) => theme.bgBase};
-  border: ${({ theme }) => theme.highlightSecondary} solid;
-  border-radius: 6px;
-  padding: 10px 30px;
-  font-size: ${FontSizes.body};
-  margin-bottom: 15px;
-  transition: all 0.25s linear;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.btnHover};
-  }
-`;
