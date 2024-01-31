@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { FontSizes } from "../../components/Theme";
+import styled from 'styled-components';
+import { FontSizes } from '../../components/Theme';
 
 export const MainBodyContainer = styled.div`
   display: flex;
@@ -87,6 +87,22 @@ export const TextArea = styled.textarea`
 `;
 
 export const SendButton = styled.input`
+  cursor: pointer;
+  color: ${({ theme }) => theme.highlightSecondary};
+  background: ${({ theme }) => theme.bgBase};
+  border: ${({ theme }) => theme.highlightSecondary} solid;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: ${FontSizes.body};
+  margin-bottom: 15px;
+  transition: all 0.25s linear;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.btnHover};
+  }
+`;
+
+export const ContactMeButton = styled.button`
   cursor: pointer;
   color: ${({ theme }) => theme.highlightSecondary};
   background: ${({ theme }) => theme.bgBase};

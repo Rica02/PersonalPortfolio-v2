@@ -1,16 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 import {
   MainBodyContainer,
   FormContainer,
   Input,
   SendButton,
   TextArea,
-} from "./ContactMe.style";
-import { useNav } from "../../hooks/useNav";
-import emailjs from "@emailjs/browser";
+  ContactMeButton,
+} from './ContactMe.style';
+import { useNav } from '../../hooks/useNav';
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
-  const contactMeRef = useNav("contactme");
+  const contactMeRef = useNav('contactme');
   const form = useRef();
   const [emailSent, setEmailSent] = useState(false);
 
@@ -19,11 +20,11 @@ const ContactMe = () => {
 
     // Validate form
     if (
-      document.getElementById("user_name").value &&
-      document.getElementById("user_email").value &&
-      document.getElementById("message").value
+      document.getElementById('user_name').value &&
+      document.getElementById('user_email').value &&
+      document.getElementById('message').value
     ) {
-      if (isValidEmail(document.getElementById("user_email").value)) {
+      if (isValidEmail(document.getElementById('user_email').value)) {
         // Send email
         emailjs
           .sendForm(
@@ -42,13 +43,13 @@ const ContactMe = () => {
           );
 
         // Clear form and show confirmation message
-        document.getElementById("contact-form").reset();
+        document.getElementById('contact-form').reset();
         setEmailSent(true);
       } else {
-        alert("Please enter a valid email.");
+        alert('Please enter a valid email.');
       }
     } else {
-      alert("Please fill in all fields.");
+      alert('Please fill in all fields.');
     }
   };
 
@@ -65,13 +66,12 @@ const ContactMe = () => {
         </header>
         <MainBodyContainer>
           {/* Contact me form */}
-          <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
+          {/* <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
             <p>
               Did I catch your eye? Feel free to contact me!
               <br />
               <br />
               You can reach me with the form below :)
-              {/* I'm open for job offers and available on a full-time capacity. */}
             </p>
             <Input
               id="user_name"
@@ -91,6 +91,16 @@ const ContactMe = () => {
               Thank you for your message, I will get back to you as soon as
               possible!
             </span>
+          </FormContainer> */}
+          <FormContainer ref={form} onSubmit={sendEmail} id="contact-form">
+            <p>Did I catch your eye? Feel free to contact me!</p>
+            <ContactMeButton
+              onClick={() => {
+                window.open('mailto:ricamaeaverion22@gmail.com', '_blank');
+              }}
+            >
+              CONTACT ME @ ricamaeaverion22@gmail.com
+            </ContactMeButton>
           </FormContainer>
         </MainBodyContainer>
       </div>
